@@ -14,9 +14,11 @@ class Solution(object):
     def flipAndInvertImage(self, A):
         for a in xrange(0, len(A)):
             # flip horizontally
-            A[a] = A[a][::1]
+            A[a] = A[a][::-1]
+            print(A[a], 'reverse')
             # invert image
             A[a] = [1 if i == 0 else 0 for i in A[a]]
+            print(A[a], 'inverted')
         return A
 
 
